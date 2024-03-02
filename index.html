@@ -1,9 +1,120 @@
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Banana.x的网站</title>
-	</head>
-	<body>
-		本站在建中，敬请期待！
-    This station is under construction, please look forward to it!
-	</body>
+<head>
+    <title>Banana.x的个人网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+        }
+        
+        nav ul li a.active {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        section {
+            margin-top: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    navLinks.forEach(function(link) {
+                        link.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                    
+                    var target = this.getAttribute("href");
+                    var section = document.querySelector(target);
+                    
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hello！我是Banana.x。欢迎来到我的个人网站！</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#h" class="active">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+    
+    <section id="h">
+        <h2>首页</h2>
+        <p>这里是Banana.x的个人网站</p>
+    </section>
+    
+    <section id="about">
+        <h2>关于我</h2>
+        <p>我是一个来自重庆市潼南区的小学生~六年级~</p>
+    </section>
+    
+    <section id="projects">
+        <h2>项目</h2>
+        <p>暂无~~</p>
+    </section>
+    
+    <section id="contact">
+        <h2>联系我</h2>
+        <p>xiaoyi9289@outlook.com</p>
+    </section>
+    
+    <footer>
+        <p>版权所有 &copy; 2024 Banana.x</p>
+    </footer>
+</body>
 </html>
