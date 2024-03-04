@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Banana.x的个人网站</title>
+    <title>Banana.x</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,6 +53,26 @@
             padding: 20px;
             text-align: center;
         }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -76,36 +95,55 @@
                     }
                 });
             });
+            
+            var backToTopButton = document.querySelector(".back-to-top");
+            
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 200) {
+                    backToTopButton.classList.add("show");
+                } else {
+                    backToTopButton.classList.remove("show");
+                }
+            });
+            
+            backToTopButton.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
         });
     </script>
 </head>
 <body>
     <header>
-        <h1>Hello！我是Banana.x。欢迎来到我的个人网站！</h1>
+        <h1>你好！👋</h1>
+        <h1>Hello！👋</h1>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#h" class="active">首页</a></li>
+            <li><a href="#home" class="active">首页</a></li>
             <li><a href="#about">关于我</a></li>
             <li><a href="#projects">项目</a></li>
             <li><a href="#contact">联系我</a></li>
         </ul>
     </nav>
     
-    <section id="h">
-        <h2>首页</h2>
-        <p>这里是Banana.x的个人网站</p>
+    <section id="home">
+        <h>很高兴认识你</h>
+        <h>没错，我就是Banana.x</h>
     </section>
     
     <section id="about">
-        <h2>关于我</h2>
-        <p>我是一个来自重庆市潼南区的小学生~六年级~</p>
+        <h2>简单介绍一下</h2>
+        <p>Banana.x（真实姓名：不想说🤭）</p>
+        <p>国籍：中国</p>
+        <p>生日：2012/05/14</p>
+        <p>年龄：自己算</p>
+        <p>身份：小学生一个</p>
     </section>
     
     <section id="projects">
         <h2>项目</h2>
-        <p>暂无~~</p>
+        <p>暂无~期待的话就献上一个Star吧！</p>
     </section>
     
     <section id="contact">
@@ -116,5 +154,496 @@
     <footer>
         <p>版权所有 &copy; 2024 Banana.x</p>
     </footer>
+    
+    <div class="back-to-top">
+        &uarr;
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banana.x</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+        }
+        
+        nav ul li a.active {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        section {
+            margin-top: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    navLinks.forEach(function(link) {
+                        link.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                    
+                    var target = this.getAttribute("href");
+                    var section = document.querySelector(target);
+                    
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+            
+            var backToTopButton = document.querySelector(".back-to-top");
+            
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 200) {
+                    backToTopButton.classList.add("show");
+                } else {
+                    backToTopButton.classList.remove("show");
+                }
+            });
+            
+            backToTopButton.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>你好！👋</h1>
+        <h1>Hello！👋</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h>很高兴认识你</h>
+        <h>没错，我就是Banana.x</h>
+    </section>
+    
+    <section id="about">
+        <h2>简单介绍一下</h2>
+        <p>Banana.x（真实姓名：不想说🤭）</p>
+        <p>国籍：中国</p>
+        <p>生日：2012/05/14</p>
+        <p>年龄：自己算</p>
+        <p>身份：小学生一个</p>
+    </section>
+    
+    <section id="projects">
+        <h2>项目</h2>
+        <p>暂无~期待的话就献上一个Star吧！</p>
+    </section>
+    
+    <section id="contact">
+        <h2>联系我</h2>
+        <p>xiaoyi9289@outlook.com</p>
+    </section>
+    
+    <footer>
+        <p>版权所有 &copy; 2024 Banana.x</p>
+    </footer>
+    
+    <div class="back-to-top">
+        &uarr;
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banana.x</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+        }
+        
+        nav ul li a.active {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        section {
+            margin-top: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    navLinks.forEach(function(link) {
+                        link.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                    
+                    var target = this.getAttribute("href");
+                    var section = document.querySelector(target);
+                    
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+            
+            var backToTopButton = document.querySelector(".back-to-top");
+            
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 200) {
+                    backToTopButton.classList.add("show");
+                } else {
+                    backToTopButton.classList.remove("show");
+                }
+            });
+            
+            backToTopButton.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>你好！👋</h1>
+        <h1>Hello！👋</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h>很高兴认识你</h>
+        <h>没错，我就是Banana.x</h>
+    </section>
+    
+    <section id="about">
+        <h2>简单介绍一下</h2>
+        <p>Banana.x（真实姓名：不想说🤭）</p>
+        <p>国籍：中国</p>
+        <p>生日：2012/05/14</p>
+        <p>年龄：自己算</p>
+        <p>身份：小学生一个</p>
+    </section>
+    
+    <section id="projects">
+        <h2>项目</h2>
+        <p>暂无~期待的话就献上一个Star吧！</p>
+    </section>
+    
+    <section id="contact">
+        <h2>联系我</h2>
+        <p>xiaoyi9289@outlook.com</p>
+    </section>
+    
+    <footer>
+        <p>版权所有 &copy; 2024 Banana.x</p>
+    </footer>
+    
+    <div class="back-to-top">
+        &uarr;
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banana.x</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+        }
+        
+        nav ul li a.active {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        section {
+            margin-top: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    navLinks.forEach(function(link) {
+                        link.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                    
+                    var target = this.getAttribute("href");
+                    var section = document.querySelector(target);
+                    
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+            
+            var backToTopButton = document.querySelector(".back-to-top");
+            
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 200) {
+                    backToTopButton.classList.add("show");
+                } else {
+                    backToTopButton.classList.remove("show");
+                }
+            });
+            
+            backToTopButton.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>你好！👋</h1>
+        <h1>Hello！👋</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h>很高兴认识你</h>
+        <h>没错，我就是Banana.x</h>
+    </section>
+    
+    <section id="about">
+        <h2>简单介绍一下</h2>
+        <p>Banana.x（真实姓名：不想说🤭）</p>
+        <p>国籍：中国</p>
+        <p>生日：2012/05/14</p>
+        <p>年龄：自己算</p>
+        <p>身份：小学生一个</p>
+        <p>喜欢唱🎤、跳、rap🎤、打篮球🏀</p>
+    </section>
+    
+    <section id="projects">
+        <h2>项目</h2>
+        <p>暂无~期待的话就献上一个Star吧！</p>
+    </section>
+    
+    <section id="contact">
+        <h2>联系我</h2>
+        <p>xiaoyi9289@outlook.com</p>
+    </section>
+    
+    <footer>
+        <p>版权所有 &copy; 2024 Banana.x</p>
+    </footer>
+    
+    <div class="back-to-top">
+        &uarr;
+    </div>
 </body>
 </html>
