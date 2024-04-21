@@ -84,35 +84,6 @@
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     }
 
-    /* Features section styles */
-    .features {
-      padding: 40px;
-      text-align: center;
-      border-radius: 10px;
-      margin: 0 auto;
-      background-color: #fff;
-      overflow: hidden;
-    }
-
-    .features h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .feature-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      margin-right: 20px;
-    }
-
     /* About section styles */
     .about {
       padding: 40px;
