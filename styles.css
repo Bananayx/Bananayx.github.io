@@ -1,0 +1,33 @@
+/* 设置页面整体背景颜色为黑色 */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 为倒计时元素设置基本样式和渐变动画相关属性 */
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s linear infinite;
+}
+
+/* 定义渐变动画 */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
