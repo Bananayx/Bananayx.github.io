@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人网站 - Material Design 风格</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 使用 Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- 引入 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <h1><a href="#home">Banana Y.X.</a></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#projects">作品集</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+      <div class="mobile-menu">
+        <span class="material-icons">menu</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主要内容区域 -->
+  <main>
+    <!-- 首页 -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h2>欢迎来到我的个人网站</h2>
+        <p>一个充满创意和技术的角落</p>
+        <a href="#about" class="btn">了解更多</a>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <h2>关于我</h2>
+        <p>我是一名对编程充满热情的技术爱好者，专注于前端开发和用户体验设计。</p>
+        <p>在这里，你可以看到我的作品，了解我的想法和技术。</p>
+      </div>
+    </section>
+
+    <!-- 作品集 -->
+    <section id="projects" class="projects-section">
+      <div class="projects-content">
+        <h2>我的作品集</h2>
+        <div class="card-grid">
+          <!-- 卡片示例 -->
+          <div class="card">
+            <img src="https://via.placeholder.com/300" alt="项目 1">
+            <h3>项目名称</h3>
+            <p>项目描述...</p>
+            <a href="#" class="btn">查看详情</a>
+          </div>
+          <!-- 添加更多卡片 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact-section">
+      <div class="contact-content">
+        <h2>联系我</h2>
+        <form>
+          <input type="text" placeholder="您的姓名">
+          <input type="email" placeholder="您的邮箱">
+          <textarea placeholder="您的留言"></textarea>
+          <button type="submit" class="btn">发送消息</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2023 Banana Y.X. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" class="material-icons">code</a>
+        <a href="#" class="material-icons">github</a>
+        <a href="#" class="material-icons">mail</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 引入 JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
