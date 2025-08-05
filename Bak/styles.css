@@ -1,0 +1,144 @@
+
+    /* Reset some default styles  */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+	
+	a {
+		text-decoration: none;
+	}
+	
+	a:hover{
+		text-decoration:none;
+	}
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0078D7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+	
+	img {
+      width: 40px;
+      height: 40px;
+	  border-radius:40px;
+	}
+
+    /* Navigation styles */
+    nav {
+      background-color: #ccc;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 0 auto;
+      opacity: 0;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav.show {
+      opacity: 1;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0078D7;
+    }
+
+    /* Hero section styles */
+    .hero {
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .hero h1 {
+      font-size: 100px;
+	  font-family:华文行楷;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About section styles */
+    .about {
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 0 auto;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .about h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+	
+    /* projects section styles */
+    .projects {
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 0 auto;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .projects h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+        
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #0078D7;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+	}
+        
+    .back-to-top.show {
+        opacity: 1;
+    }
