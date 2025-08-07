@@ -1,0 +1,99 @@
+header {
+    background-color: rgb(0, 120, 215);
+    color: #fff;
+    /*padding: 10px;*/
+    height: 64px;
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 让左右两侧元素分开 */
+}
+
+#header-div-left {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 图片和文字之间的间距 */
+}
+
+#header-div-left-list {
+    margin-left: 10px;
+}
+
+#header-div-left-list-btn {
+    border:none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+#header-div-left-list-btn:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 95, 173, 0.4);
+}
+
+#header-div-left-list-btn:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* 添加阴影效果 */
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#header-div-left-title {
+    font-size: 15px;
+}
+
+
+
+
+
+
+#header-div-right {
+    display: flex;
+    flex-shrink: 0; /* 右对齐 */
+    margin-right: 10px;
+    gap: 10px;
+}
+
+#header-div-right-lord-btn {
+    border:none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+#header-div-right-lord-btn:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 95, 173, 0.4);
+}
+
+#header-div-right-lord-btn:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* 添加阴影效果 */
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#header-div-right-search-btn {
+    border:none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+#header-div-right-search-btn:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 95, 173, 0.4);
+}
+
+#header-div-right-search-btn:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* 添加阴影效果 */
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+
+

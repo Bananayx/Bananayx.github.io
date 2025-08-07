@@ -3,30 +3,44 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 主题切换 */
+[data-theme="light"] {
   background-color: #fff;
   color: #333;
 }
 
-/* 导航栏 */
-.header {
-  background-color: #0078D7; /* Material Design 蓝色 */
+[data-theme="dark"] {
+  background-color: #333;
   color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+/* 导航栏 */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 60px; /* 增加左侧间距，防止按钮重叠 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-logo h1 {
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header-logo h1 {
+  margin: 0 0 0 10px;
   font-size: 24px;
-  margin: 0;
 }
 
 .nav-links {
@@ -34,13 +48,10 @@ body {
   display: flex;
 }
 
-.nav-links li {
-  margin-left: 20px;
-}
-
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
+  margin: 0 10px;
   font-size: 16px;
   transition: color 0.3s;
 }
@@ -49,17 +60,10 @@ body {
   color: #FFC107; /* Material Design 黄色 */
 }
 
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-}
-
 /* 主要内容区域 */
 .hero-section {
-  background: linear-gradient(to bottom, #0078D7, #B3CCFF);
-  color: #fff;
-  text-align: center;
   padding: 100px 0;
+  text-align: center;
 }
 
 .hero-content {
@@ -88,14 +92,22 @@ body {
   transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: #FFC107; /* Material Design 黄色 */
+[data-theme="dark"] .btn {
+  background-color: #fff;
+  color: #333;
+}
+
+[data-theme="dark"] .btn:hover {
+  background-color: #FFC107;
+}
+
+[data-theme="light"] .btn:hover {
+  background-color: #333;
 }
 
 /* 关于我 */
 .about-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
   text-align: center;
 }
 
@@ -141,6 +153,10 @@ body {
   transition: transform 0.3s;
 }
 
+[data-theme="dark"] .card {
+  background-color: #333;
+}
+
 .card:hover {
   transform: scale(1.03);
 }
@@ -161,7 +177,6 @@ body {
 /* 联系方式 */
 .contact-section {
   padding: 50px 0;
-  background-color: #e3f2fd;
   text-align: center;
 }
 
@@ -192,8 +207,14 @@ body {
   transition: background-color 0.3s;
 }
 
-.contact-content form button:hover {
-  background-color: #FFC107;
+[data-theme="dark"] .contact-content form input,
+[data-theme="dark"] .contact-content form textarea {
+  border-color: #fff;
+}
+
+[data-theme="dark"] .contact-content form button {
+  background-color: #fff;
+  color: #333;
 }
 
 /* 底部 */
@@ -202,6 +223,11 @@ body {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+[data-theme="light"] .footer {
+  background-color: #fff;
+  color: #333;
 }
 
 .footer-content p {
@@ -213,8 +239,36 @@ body {
 }
 
 .social-links a {
-  color: #fff;
+  color: inherit;
   margin: 0 5px;
   font-size: 24px;
   text-decoration: none;
+}
+
+/* 主题切换按钮 */
+#theme-toggler {
+  position: fixed;
+  top: 20px;
+  right: 60px; /* 增加间距，避免与导航栏重叠 */
+  z-index: 1000;
+}
+
+#theme-toggle-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }

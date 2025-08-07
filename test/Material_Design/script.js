@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const mobileMenuIcon = document.querySelector('.mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
+  const body = document.body;
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const darkModeIcon = 'dark_mode';
+  const lightModeIcon = 'wb_sunny';
 
-  mobileMenuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  // 初始主题
+  const storedTheme = localStorage.getItem('theme') || 'light';
+  body.dataset.theme = storedTheme;
+  themeToggleBtn.innerHTML = storedTheme === 'light' ? darkModeIcon : lightModeIcon;
+
+  // 主题切换功能
+  themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = body.dataset.theme;
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    body.dataset.theme = newTheme;
+    themeToggleBtn.innerHTML = newTheme === 'light' ? darkModeIcon : lightModeIcon;
+    localStorage.setItem('theme', newTheme);
   });
 });

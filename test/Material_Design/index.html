@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="cn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人网站 - Material Design 风格</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- 使用 Material Icons -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Banana Y.X. | 我的个人网站">
+  <meta name="keywords" content="Banana Y.X., 个人网站, 博客">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Banana Y.X. | 我的个人网站</title>
+  <!-- 引入 Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- 引入 Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- 主题切换按钮 -->
+  <div id="theme-toggler">
+    <button class="theme-toggle" id="theme-toggle-btn" title="切换主题">
+      <span class="material-icons">dark_mode</span>
+    </button>
+  </div>
+
   <!-- 导航栏 -->
   <header class="header">
-    <nav class="navbar">
-      <div class="nav-logo">
-        <h1><a href="#home">Banana Y.X.</a></h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">首页</a></li>
-        <li><a href="#about">关于我</a></li>
-        <li><a href="#projects">作品集</a></li>
-        <li><a href="#contact">联系我</a></li>
-      </ul>
-      <div class="mobile-menu">
-        <span class="material-icons">menu</span>
-      </div>
+    <div class="header-logo">
+      <img src="https://img.cdn1.vip/i/6891ccaa59734_1754385578.webp" alt="Logo" class="logo">
+      <h1>Banana Y.X.</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="#home">首页</a>
+      <a href="#about">关于我</a>
+      <a href="#projects">作品集</a>
+      <a href="#contact">联系我</a>
     </nav>
   </header>
 
@@ -91,8 +99,5 @@
       </div>
     </div>
   </footer>
-
-  <!-- 引入 JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
