@@ -3,6 +3,11 @@
     src: url("./font/5_Minecraft AE(支持中文).ttf");
 }
 
+@font-face {
+    font-family: MaterialIcons-Regular;
+    src: url("./font/MaterialIcons-Regular.ttf");
+}
+
 h2 {
     margin: 0;
 }
