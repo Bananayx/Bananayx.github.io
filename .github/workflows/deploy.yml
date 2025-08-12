@@ -1,0 +1,50 @@
+name: 构建页面并部署
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤 1：检出源码
+      - name: 1. 检出源码
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 重要！用于拉取主题子模块
+
+      # 步骤 2：安装 Node.js
+      - name: 2. 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 步骤 3：缓存依赖加速构建
+      - name: 3. 缓存依赖加速构建
+        uses: actions/cache@v3
+        id: cache-deps
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+
+      # 步骤 4：安装依赖
+      - name: 4. 安装依赖
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: npm install
+
+      # 步骤 5：生成静态文件
+      - name: 5. 生成静态文件
+        run: |
+          hexo clean
+          hexo generate
+
+      # 步骤 6：部署到 GitHub Pages
+      - name: 6. 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages  # 推送到 yourname.github.io 仓库的 gh-pages 分支
+          external_repository: Bananayx/Bananayx.github.io  # 替换为你的 Pages 仓库名
+          keep_files: false     # 完全覆盖目标分支
