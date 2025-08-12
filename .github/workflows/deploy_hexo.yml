@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: '22.18.0'
 
+      # 步骤 2.1：安装 Hexo
+      - name: 2.1. 安装 Hexo
+        run: |
+          npm uninstall -g hexo-cli
+          npm install -g hexo-cli
+
       # 步骤 3：缓存依赖加速构建
       - name: 3. 缓存依赖加速构建
         uses: actions/cache@v3
@@ -36,6 +42,7 @@ jobs:
       # 步骤 5：生成静态文件
       - name: 5. 生成静态文件
         run: |
+          hexo clean
           hexo generate
 
       # 步骤 6：部署到 GitHub Pages
