@@ -49,7 +49,7 @@ jobs:
       - name: 6. 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages  # 推送到 yourname.github.io 仓库的 gh-pages 分支
           external_repository: Bananayx/Bananayx.github.io  # 替换为你的 Pages 仓库名
