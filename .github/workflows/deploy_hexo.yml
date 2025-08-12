@@ -19,11 +19,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.18.0'
-        run: npm install
 
       # 步骤 2.1：安装 Hexo
       - name: 2.1. 安装 Hexo
         run: |
+          run: npm install
           npm install hexo-deployer-git --save
           npm install -g hexo-cli
 
