@@ -6,7 +6,7 @@
 title: Banana Y.X.
 subtitle: '面朝大海，春暖花开'
 description: 'Banana Y.X.的小站'
-keywords:
+keywords: "Banana Y.X., 博客, 个人网站, 前端, 程序员, Banana, Bananayx, yx ,Y.X. "
 author: Banana Y.X.
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

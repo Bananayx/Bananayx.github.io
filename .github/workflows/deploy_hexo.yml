@@ -25,9 +25,11 @@ jobs:
         run: |
           npm uninstall hexo-cli
           npm uninstall hexo-deployer-git
+          npm uninstall hexo-render-pug
           npm install
           npm install hexo-deployer-git --save
           npm install -g hexo-cli
+          npm install hexo-render-pug --save
 
       # 步骤 3:生成静态文件
       - name: 3. 生成静态文件
