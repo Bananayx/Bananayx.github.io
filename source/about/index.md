@@ -12,5 +12,5 @@ layout: about
 ### 联系方式
 你可以通过以下方式联系到我：
 - 抖音：<a href="https://www.douyin.com/user/MS4wLjABAAAA0y-EB2FwDesDJnUjwTTJJU7uuvcOaIHr07y0bAFh_Wk" target="_blank">@Banana Y.X.</a>
-- 本页(即关于页)底部联系方式
+- 本页头像下方社交图标
 
