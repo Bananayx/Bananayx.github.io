@@ -21,5 +21,5 @@ layout: about
 - <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank">Fluid</a>
 - <a href="https://img.scdn.io/" target="_blank">图床 - 简单、快速、免费的图床</a>
 - <a href="[https://](https://code.visualstudio.com/)" target="_blank">VSCode</a>
-- <a href="https://github.com/" target="_blank">Github Pages</a>
+- <a href="https://pages.github.com/" target="_blank">Github Pages</a>
 - <a href="https://bing.com/" target="_blank">Bing Wallpaper</a>
