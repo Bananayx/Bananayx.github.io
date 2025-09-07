@@ -813,18 +813,19 @@ gitalk:
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
-  appId:
-  appKey:
+  appId: bS4cbsjhxSh6zvwMqAwONyjl-MdYXbMMI
+  appKey: ElSvggdyvdaToqFelzXXcq7e
   path: window.location.pathname
-  placeholder:
+  placeholder: 欢迎留言交流~
   avatar: 'retro'
   meta: ['nick', 'mail', 'link']
   requiredFields: []
   pageSize: 10
   lang: 'zh-CN'
-  highlight: false
-  recordIP: false
-  serverURLs: ''
+  visitor: true
+  highlight: true
+  recordIP: true
+  serverURLs: 'https://bs4cbsjh.api.lncldglobal.com'
   emojiCDN:
   emojiMaps:
   enableQQ: false
