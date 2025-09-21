@@ -60,4 +60,4 @@ categories:
 
 也许下次打车，我会遇到一位说自己参与过Vue源码编写的司机师傅。毕竟，技术在变，但程序员们改变世界的心，永远飞驰在代码的海洋里。
 
->转载自微信公众号@前端之窗https://mp.weixin.qq.com/s/LUwfZNys7575piLUmzJ5RA 如有侵权请联系删除
+>转载自微信公众号@前端之窗[https://mp.weixin.qq.com/s/Lu…](https://mp.weixin.qq.com/s/LUwfZNys7575piLUmzJ5RA)如有侵权请联系删除
