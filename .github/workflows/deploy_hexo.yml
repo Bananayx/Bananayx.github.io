@@ -34,6 +34,7 @@ jobs:
       # 步骤 3:生成静态文件
       - name: 3. 生成静态文件
         run: |
+          rm -rf node_modules && npm install --force
           hexo clean
           hexo generate
 
