@@ -1,7 +1,7 @@
 # head
 menu:
-  博客: https://bananayx.github.io/blog
-  关于: /about
+  博客: https://blog.bananayx.qzz.io/
+  关于: /about/
   # sitemap: /sitemap.xml
   # other menus
 
@@ -17,7 +17,7 @@ google_analytics: false     # your id
 comment_plugin: false # valine or livere
 
 # mathjax
-mathjax: false # or true
+mathjax: true # or true
 mathjax_cdn: //cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # valine https://valine.js.org/
@@ -46,7 +46,7 @@ icp_link: "https://icp.gov.moe/?keyword=20259289"
 
 # add your qr image
 # reward_images:
-  # - type: "微信"
-  #   url: "/img/wechat.png"
-  # - type: '支付宝'
-  #   url: '/img/wechat.png'
+#   - type: "微信"
+#     url: "/img/wechat.png"
+#   # - type: '支付宝'
+#   #   url: '/img/wechat.png'
