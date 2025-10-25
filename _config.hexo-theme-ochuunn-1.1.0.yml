@@ -6,7 +6,8 @@ menu:
   # other menus
 
 rss: /atom.xml
-favicon: https://img.cdn1.vip/i/6891ccaa59734_1754385578.webp
+favicon: https://files.bananayx.qzz.io/img/Banana头像.png
+# favicon: https://img.cdn1.vip/i/6891ccaa59734_1754385578.webp
 
 date_format: "YYYY - MM - DD HH:mm:ss"
 
